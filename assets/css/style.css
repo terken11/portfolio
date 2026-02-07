@@ -91,6 +91,16 @@ section {
   backdrop-filter: blur(12px);
   z-index: 100;
 }
+.hamburger {
+  color: var(--accent); /* 🔥 burnt orange */
+}.hamburger {
+  color: var(--accent); /* 🔥 burnt orange */
+  }
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* 👈 mobile only */
+  }
+}
 
 .nav {
   display: flex;
