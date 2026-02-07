@@ -148,7 +148,7 @@ section {
 
 .button {
   display: inline-block;
-  background: var(--burnt-orange);
+  background: var(--accent);
   color: white;
   padding: 1rem 2rem;
   border-radius: 0.75rem;
