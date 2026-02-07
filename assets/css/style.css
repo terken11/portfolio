@@ -156,6 +156,10 @@ section {
   max-width: 360px;   /* 👈 THIS stops stretching */
   margin: auto;       /* centers the card */
 }
+.services-grid {
+  max-width: 1100px;  /* 👈 controls total width */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
 
 .projects__card {
   position: relative;
