@@ -6,6 +6,9 @@
   --olive: #6b7f5a;
   --sand: #f4efe9;
   --clay: #9c6644;
+  
+  --accent: #c65a1e; /* 🔥 change this color if needed */
+  
 }
 
 * {
@@ -149,11 +152,9 @@ section {
   color: var(--burnt-orange);
 }
 
-.services__card {
-  background: white;
-  padding: 2.5rem;
-  border-radius: 1.5rem;
-  text-align: center;
+.service-card {
+  max-width: 360px;   /* 👈 THIS stops stretching */
+  margin: auto;       /* centers the card */
 }
 
 .projects__card {
