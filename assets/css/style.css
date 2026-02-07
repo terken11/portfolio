@@ -43,6 +43,32 @@ section {
   gap: 2.5rem;
   align-items: center;
 }
+.home__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.home__image img {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  border-radius: 2rem;
+  display: block;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .home__container {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+
+  .home__image {
+    display: flex;
+    justify-content: center;
+  }
+    }
 
 .section__title {
   text-align: center;
