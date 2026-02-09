@@ -7,6 +7,64 @@
   --olive: #6b7f5a;
   --accent: var(--burnt-orange);
 }
+/* ===== African Trim Pattern (Top & Bottom Only) ===== */
+.african-trim {
+  position: relative;
+  background-color: #f6f1ea; /* sand / paper */
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+/* TOP BORDER */
+.african-trim::before,
+.african-trim::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 22px;
+  background-size: 40px 22px;
+  background-repeat: repeat-x;
+}
+
+/* Top pattern */
+.african-trim::before {
+  top: 0;
+  background-image:
+    linear-gradient(135deg, #6b7f5a 25%, transparent 25%),
+    linear-gradient(225deg, #c65d2e 25%, transparent 25%),
+    linear-gradient(315deg, #3a2a1f 25%, transparent 25%),
+    linear-gradient(45deg,  #6b7f5a 25%, transparent 25%);
+}
+.african-trim::before,
+.african-trim::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 26px;
+  background-repeat: repeat-x;
+  background-size: 48px 26px;
+  animation: african-scroll 8s linear infinite;
+}
+/* Bottom pattern (mirrored) */
+.african-trim::after {
+  bottom: 0;
+  transform: rotate(180deg);
+  background-image:
+    linear-gradient(135deg, #6b7f5a 25%, transparent 25%),
+    linear-gradient(225deg, #c65d2e 25%, transparent 25%),
+    linear-gradient(315deg, #3a2a1f 25%, transparent 25%),
+    linear-gradient(45deg,  #6b7f5a 25%, transparent 25%);
+}
+
+/* Keep content above pattern */
+.african-trim > * {
+  position: relative;
+  z-index: 1;
+}
+height: 16px;
+background-size: 32px 16px;
 
 * {
   margin: 0;
@@ -227,5 +285,394 @@ body {
   .nav__toggle,
   .nav__close {
     display: none !important;
+  }
+}@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --earth-brown: #3b2f2f;
+  --burnt-orange: #c65d2e;
+  --sand: #f4efe9;
+  --olive: #6b7f5a;
+  --accent: var(--burnt-orange);
+}
+.african-trim {
+  position: relative;
+  background: #f6f1ea;
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+/* shared trim */
+.african-trim::before,
+.african-trim::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 26px;
+  background-repeat: repeat-x;
+  background-size: 48px 26px;
+}
+
+/* TOP TRIM */
+.african-trim::before {
+  top: 0;
+  background-image:
+    /* thin top line */
+    linear-gradient(#a56a43, #a56a43),
+
+    /* green triangles */
+    linear-gradient(60deg, transparent 75%, #6b7f5a 76%),
+    linear-gradient(-60deg, transparent 75%, #6b7f5a 76%),
+
+    /* orange inverted triangles */
+    linear-gradient(120deg, transparent 75%, #c65d2e 76%),
+    linear-gradient(-120deg, transparent 75%, #c65d2e 76%);
+    
+  background-size:
+    100% 2px,
+    48px 24px,
+    48px 24px,
+    48px 24px,
+    48px 24px;
+
+  background-position:
+    top,
+    0 2px,
+    0 2px,
+    24px 2px,
+    24px 2px;
+}
+
+/* BOTTOM TRIM (mirrored + scallop feel) */
+.african-trim::after {
+  bottom: 0;
+  transform: rotate(180deg);
+  background-image:
+    linear-gradient(#a56a43, #a56a43),
+    linear-gradient(60deg, transparent 75%, #6b7f5a 76%),
+    linear-gradient(-60deg, transparent 75%, #6b7f5a 76%),
+    linear-gradient(120deg, transparent 75%, #c65d2e 76%),
+    linear-gradient(-120deg, transparent 75%, #c65d2e 76%);
+    
+  background-size:
+    100% 2px,
+    48px 24px,
+    48px 24px,
+    48px 24px,
+    48px 24px;
+
+  background-position:
+    top,
+    0 2px,
+    0 2px,
+    24px 2px,
+    24px 2px;
+}
+
+/* ensure content stays above trim */
+.african-trim > * {
+  position: relative;
+  z-index: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--sand);
+  color: var(--earth-brown);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section__title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(244,239,233,0.9);
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+.nav__logo span {
+  color: var(--accent);
+}
+
+.nav__list {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--earth-brown);
+}
+
+.nav__toggle,
+.nav__close {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+/* HOME */
+.home__container {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+.home__title {
+  font-size: 3rem;
+  color: var(--accent);
+}
+
+.home__image img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 2rem;
+}
+
+/* BUTTON */
+.button {
+  background: var(--accent);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  display: inline-block;
+  margin-top: 1.5rem;
+  text-decoration: none;
+}
+
+/* SKILLS */
+.skills__list {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+/* SERVICES */
+.services__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.services__card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.services__card i {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+
+
+
+/* PROJECTS */
+.projects__card {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+/* PORTFOLIO */
+.portfolio__container {
+  overflow: hidden;
+  position: relative;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.portfolio__scroll {
+  display: flex;
+  gap: 1.5rem;
+  animation: scroll-portfolio 20s linear infinite; /* Auto-scroll */
+}
+
+.portfolio__item {
+  position: relative;
+  min-width: 300px; /* Width of each item */
+  border-radius: 1.5rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.portfolio__item video {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  display: block;
+}
+
+/* Overlay on hover / touch */
+.portfolio__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(59, 47, 47, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.portfolio__item:hover .portfolio__overlay,
+.portfolio__item:focus-within .portfolio__overlay {
+  opacity: 1;
+}
+
+/* Scroll animation */
+@keyframes scroll-portfolio {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* adjust based on items */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .portfolio__item video {
+    height: 150px;
+  }
+}
+.projects__card img {
+  width: 100%;
+}
+
+.projects__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(59,47,47,0.6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.projects__card:hover .projects__overlay {
+  opacity: 1;
+}
+
+/* CONTACT */
+.contact__form {
+  display: grid;
+  gap: 1.2rem;
+  max-width: 500px;
+}
+
+.contact__form input,
+.contact__form textarea {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--earth-brown);
+  color: var(--sand);
+  text-align: center;
+  padding: 2rem;
+}
+
+
+@media (min-width: 768px) {
+  .home__container {
+    grid-template-columns: 1fr 1fr; /* 👈 two columns */
+    text-align: left;
+  }
+
+  .home__image {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    background: var(--sand);
+    padding: 3rem;
+    transition: 0.3s;
+  }
+
+  .show-menu {
+    right: 0;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .nav__toggle,
+  .nav__close {
+    display: block;
+  }
+}
+@media (min-width: 769px) {
+  .nav__toggle,
+  .nav__close {
+    display: none !important;
+  }
+}
+@keyframes african-scroll {
+  from {
+    background-position:
+      top,
+      0 2px,
+      0 2px,
+      24px 2px,
+      24px 2px;
+  }
+  to {
+    background-position:
+      top,
+      96px 2px,
+      96px 2px,
+      120px 2px,
+      120px 2px;
   }
   }
