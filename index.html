@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Earthy Portfolio</title>
+  <title>Trudy | Earthy Digital Creative</title>
 
   <!-- Icons -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
@@ -19,70 +19,55 @@
 
     <div class="nav__menu" id="nav-menu">
       <ul class="nav__list">
-        <li><a href="#home" class="nav__link active-link">Home</a></li>
-        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#home" class="nav__link">Home</a></li>
         <li><a href="#skills" class="nav__link">Skills</a></li>
         <li><a href="#services" class="nav__link">Services</a></li>
         <li><a href="#projects" class="nav__link">Projects</a></li>
         <li><a href="#contact" class="nav__link">Contact</a></li>
       </ul>
-      <div class="nav__close" id="nav-close"><i class="bx bx-x"></i></div>
+      <i class="bx bx-x nav__close" id="nav-close"></i>
     </div>
 
-    <div class="nav__toggle" id="nav-toggle"><i class="bx bx-menu"></i></div>
+    <i class="bx bx-menu nav__toggle" id="nav-toggle"></i>
   </nav>
 </header>
 
-<main class="main">
+<main>
 
 <!-- HOME -->
 <section class="home section" id="home">
   <div class="home__container container">
-
-    <div class="home__content">
-      <h3 class="home__subtitle">Hello, I’m</h3>
+    <div>
+      <h3>Hello, I’m</h3>
       <h1 class="home__title">Trudy</h1>
-      <h3 class="home__education">Web • SEO • Social Media</h3>
-      <p class="home__description">
-        I help African brands grow online with clean design, strategy and soul.
-      </p>
-
+      <p class="home__education">Web • SEO • Social Media</p>
+      <p>I help African brands grow online with clean design, strategy & soul.</p>
       <a href="#contact" class="button">Work With Me</a>
-
-      <div class="home__social">
-        <a href="#"><i class="bx bxl-instagram"></i></a>
-        <a href="#"><i class="bx bxl-linkedin"></i></a>
-        <a href="#"><i class="bx bxl-twitter"></i></a>
-      </div>
     </div>
 
     <div class="home__image">
-      <img src="https://raw.githubusercontent.com/terken11/portfolio/refs/heads/main/assets/img/ChatGPT%20Image%20Jan%2030%2C%202026%2C%2006_46_23%20PM%7E2.jpg" alt="hero image" />
+      <img src="https://raw.githubusercontent.com/terken11/portfolio/refs/heads/main/assets/img/ChatGPT%20Image%20Jan%2030%2C%202026%2C%2006_46_23%20PM%7E2.jpg" alt="African woman">
     </div>
-
   </div>
-          </section>
+</section>
 
 <!-- SKILLS -->
 <section class="skills section" id="skills">
   <h2 class="section__title">Skills</h2>
-
-  <div class="skills__container container grid">
-    <ul class="skills__list">
-      <li>WordPress Development</li>
-      <li>SEO & Local SEO</li>
-      <li>Social Media Strategy</li>
-      <li>Brand Design</li>
-      <li>UI / UX</li>
-    </ul>
-  </div>
+  <ul class="skills__list container">
+    <li>WordPress Development</li>
+    <li>SEO & Local SEO</li>
+    <li>Social Media Strategy</li>
+    <li>Brand Design</li>
+    <li>UI / UX</li>
+  </ul>
 </section>
 
 <!-- SERVICES -->
 <section class="services section" id="services">
   <h2 class="section__title">Services</h2>
 
-  <div class="services__container container grid">
+  <div class="services__container container">
     <div class="services__card">
       <i class="bx bx-code"></i>
       <h3>Web Design</h3>
@@ -106,13 +91,11 @@
 <!-- PROJECTS -->
 <section class="projects section" id="projects">
   <h2 class="section__title">Projects</h2>
-
-  <div class="projects__container container grid">
+  <div class="projects__container container">
     <div class="projects__card">
-      <img src="https://via.placeholder.com/350" alt="">
+      <img src="https://via.placeholder.com/400" alt="">
       <div class="projects__overlay">
         <h3>Brand Website</h3>
-        <span>View Project</span>
       </div>
     </div>
   </div>
@@ -121,7 +104,6 @@
 <!-- CONTACT -->
 <section class="contact section" id="contact">
   <h2 class="section__title">Contact Me</h2>
-
   <form class="contact__form container">
     <input type="text" placeholder="Your Name">
     <input type="email" placeholder="Your Email">
@@ -133,22 +115,17 @@
 </main>
 
 <footer class="footer">
-  <p>© 2026 Trudy. Earthy. Intentional.</p>
+  © 2026 Trudy — Earthy & Intentional
 </footer>
 
 <script>
-const navMenu = document.getElementById('nav-menu')
-const navToggle = document.getElementById('nav-toggle')
-const navClose = document.getElementById('nav-close')
+const navMenu = document.getElementById('nav-menu');
+const navToggle = document.getElementById('nav-toggle');
+const navClose = document.getElementById('nav-close');
 
-navToggle.onclick = () => navMenu.classList.add('show-menu')
-navClose.onclick = () => navMenu.classList.remove('show-menu')
-
-window.addEventListener('scroll', () => {
-  document.getElementById('header')
-    .classList.toggle('blur-header', window.scrollY > 50)
-})
+navToggle.onclick = () => navMenu.classList.add('show-menu');
+navClose.onclick = () => navMenu.classList.remove('show-menu');
 </script>
 
 </body>
-    </html>
+        </html>
