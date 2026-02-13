@@ -168,13 +168,20 @@ body{
   border-radius:50px;
   text-decoration:none;
   font-weight:600;
-  color:#000;
+  color:white;
+
   background:var(--accent);
   box-shadow:
-    0 0 10px var(--accent),
-    0 0 20px var(--accent),
-    0 0 40px var(--accent);
-  transition:.3s;
+    0 0 8px rgba(204,85,0,0.4);
+
+  transition:all .3s ease;
+}
+
+.button:hover{
+  background:var(--accent-soft);
+  box-shadow:
+    0 0 12px rgba(255,122,26,0.5);
+  transform:translateY(-2px);
 }
 
 .button:hover{
